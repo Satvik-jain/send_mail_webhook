@@ -40,7 +40,7 @@ def send_email():
         subject=subject,
         recipients=[user_email],
         body=formatted_message,
-        sender = "satvik.jain@tariniconsulting.com"
+        sender=app.config["MAIL_DEFAULT_SENDER"]
     )
 
     mail.send(msg)
