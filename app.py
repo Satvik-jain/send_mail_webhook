@@ -39,7 +39,8 @@ def send_email():
     msg = Message(
         subject=subject,
         recipients=[user_email],
-        body=formatted_message
+        body=formatted_message,
+        sender = "satvik.jain@tariniconsulting.com"
     )
 
     mail.send(msg)
