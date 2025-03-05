@@ -31,11 +31,7 @@ def send_email():
     if not user_email or not message_body:
         return jsonify({"error": "Email, subject, and message body are required!"}), 400
 
-    formatted_message = f"""
-    Subject: {subject}
-    
-    {message_body}
-    """
+    formatted_message = f"""{message_body}"""
 
     msg = Message(
         subject=subject,
