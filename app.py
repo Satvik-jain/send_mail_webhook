@@ -23,6 +23,7 @@ mail = Mail(app)
 def send_email():
     """Send an email with a properly formatted subject and message body."""
     data = request.get_json()
+    data = data.get("args")
     user_email = data.get("email")
     subject = data.get("subject", "Notification")
     message_body = data.get("message")
